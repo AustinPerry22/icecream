@@ -47,10 +47,17 @@ const containers = [{
 },]
 
 function orderContainer(type) {
-    let containerObj = containers.find(container => container.name == type)
-    console.log(containerObj)
-    containerObj.quantity++
-    drawCart()
+    let containerTotal = 0
+
+    containers.forEach(container => {
+        containerTotal += container.quantity
+    })
+    if (containerTotal < 1) {
+        let containerObj = containers.find(container => container.name == type)
+        console.log(containerObj)
+        containerObj.quantity++
+        drawCart()
+    }
 }
 function orderTopping(type) {
     let toppingObj = toppings.find(topping => topping.name == type)
@@ -97,4 +104,19 @@ function drawCart() {
     let cartElem = document.getElementById('cart')
     cartElem.innerHTML = cartContent
     drawTotal()
+}
+
+function checkOut() {
+    if (window.confirm('Do you want to check out?')) {
+        iceCream.forEach(flavor => {
+            flavor.quantity = 0
+        })
+        toppings.forEach(topping => {
+            topping.quantity = 0
+        })
+        containers.forEach(container => {
+            container.quantity = 0
+        })
+        drawCart()
+    }
 }
