@@ -30,7 +30,28 @@ const toppings = [{
     quantity: 0
 }]
 
+const containers = [{
+    name: 'Waffle Cone',
+    price: 1,
+    quantity: 0
+},
+{
+    name: 'Bowl',
+    price: 1,
+    quantity: 0
+},
+{
+    name: 'Floor',
+    price: 99.99,
+    quantity: 0
+},]
 
+function orderContainer(type) {
+    let containerObj = containers.find(container => container.name == type)
+    console.log(containerObj)
+    containerObj.quantity++
+    drawCart()
+}
 function orderTopping(type) {
     let toppingObj = toppings.find(topping => topping.name == type)
     toppingObj.quantity++
@@ -53,6 +74,9 @@ function drawTotal() {
     toppings.forEach(topping => {
         cost += (topping.price * topping.quantity)
     })
+    containers.forEach(container => {
+        cost += (container.price * container.quantity)
+    })
     let totalElem = document.getElementById('total')
     totalElem.innerText = cost.toFixed(2)
 }
@@ -65,6 +89,9 @@ function drawCart() {
     })
     toppings.forEach(topping => {
         cartContent += `<p>topping: ${topping.name} qty: ${topping.quantity}</p>`
+    })
+    containers.forEach(container => {
+        cartContent += `<p>container: ${container.name} qty: ${container.quantity}</p>`
     })
 
     let cartElem = document.getElementById('cart')
