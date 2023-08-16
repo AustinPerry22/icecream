@@ -4,13 +4,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ice Cream</title>
+    <title>I Scream</title>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
         integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bg-dark-subtle">
+    <header class="container-fluid">
+        <section class="row">
+            <div class="col-12">
+                <h2 class="text-end pe-5">I Scream</h2>
+            </div>
+        </section>
+    </header>
+    <main class="container-fluid">
+        <section class="row justify-content-evenly">
+            <!-- SECTION Cart -->
+            <div class="col-6">
+                <div class="card">
+                    <section class="row">
+                        <div class="col-6">
+                            <h4>Name</h4>
+                        </div>
+                        <div class="col-2">Qty</div>
+                        <div class="col-2">Each</div>
+                        <div class="col-2">Total</div>
+                    </section>
+                    <!-- TODO - add id to div -->
+                    <div>
+                    </div>
+                    <section class="row">
+                        <div class="col-12 text-end pe-5">
+                            <h4>Total: $<span>0</span></h4>
+                            <button class="btn btn-primary">PAY</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- SECTION cards -->
+            <div class="col-6 card-section">
+                <!-- SECTION Toppings -->
+                <h1 class="py-2">Toppings</h1>
+                <section class="row justify-content-evenly">
+                    <div class="col-3 card">
+                        <img class="card-img py-2"
+                            src="https://images.unsplash.com/photo-1516746924755-babd21844370?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5rbGVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                            alt="sprinkles">
+                        <h5 class="text-center">Sprinkles $.25</h5>
+                    </div>
+                    <div class="col-3 card">
+                        <img class="card-img py-2"
+                            src="https://images.unsplash.com/photo-1585502866757-30ae9e509e31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hvY29sYXRlJTIwY2hpcHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="chocolate chips">
+                        <h5 class="text-center">Chocolate Chips $.50</h5>
+                    </div>
+                    <div class="col-3 card">
+                        <img class="card-img py-2"
+                            src="https://images.unsplash.com/photo-1499195333224-3ce974eecb47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Z3VtbXklMjB3b3Jtc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="sprinkles">
+                        <h5 class="text-center">Gummy worms $.75</h5>
+                    </div>
+                </section>
+
+                <!-- SECTION Vessels -->
+
+                <h1 class="py-2">Vessels</h1>
+                <section class="row justify-content-evenly">
+                    <div class="col-3 card">
+                        <img class="card-img py-2"
+                            src="https://images.unsplash.com/photo-1559703248-dcaaec9fab78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2FmZmxlJTIwY29uZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Waffle Cone">
+                        <h5 class="text-center">Waffle Cone $1</h5>
+                    </div>
+                    <div class="col-3 card">
+                        <img class="card-img py-2"
+                            src="https://images.unsplash.com/photo-1603736029103-dafad0eb0906?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWNlJTIwY3JlYW0lMjBib3dsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                            alt="bowl">
+                        <h5 class="text-center">Bowl $1</h5>
+                    </div>
+                    <div class="col-3 card">
+                        <img class="card-img py-2"
+                            src="https://images.unsplash.com/photo-1592766907999-d60db561bfd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGljZSUyMGNyZWFtJTIwY29uZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="sprinkles">
+                        <h5 class="text-center">Floor $99.99</h5>
+                    </div>
+                </section>
+
+                <!-- SECTION Ice cream -->
+
+                <h1 class="py-2">Ice Cream</h1>
+                <section class="row justify-content-evenly">
+                    <div class="col-3 card">
+                        <img class="card-img py-2"
+                            src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dmFuaWxsYSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                            alt="Vanilla>
+                        <h5 class=" text-center">Vanilla $3</h5>
+                    </div>
+                    <div class="col-3 card">
+                        <img class="card-img py-2"
+                            src="https://images.unsplash.com/photo-1615729913791-6b609ba2dcae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNob2NvbGF0ZSUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                            alt="chocolate">
+                        <h5 class="text-center">Chocolate $4</h5>
+                    </div>
+                    <div class="col-3 card">
+                        <img class="card-img py-2"
+                            src="https://images.unsplash.com/photo-1532678465554-94846274c297?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGluayUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                            alt="Strawberry">
+                        <h5 class="text-center">Strawberry $4</h5>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+    </main>
     <script src="app.js"></script>
 </body>
 
